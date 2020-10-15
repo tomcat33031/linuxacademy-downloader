@@ -1,8 +1,8 @@
 # Download videos from Linux Academy / LinuxAcademy-DL
 
-If you feel like it, you can buy me a coffe ;)
+If you feel like it, you can buy me a coffee ;)
 
-<a href="https://www.buymeacoffee.com/andynguyen" target="_blank"><img src="https://cdn.buymeacoffee.com/buttons/v2/default-orange.png" alt="Buy Me A Coffee" style="height: 60px !important;width: 217px !important;" ></a>
+<a href="https://www.buymeacoffee.com/andynguyen" target="_blank"><img src="https://cdn.buymeacoffee.com/buttons/v2/default-orange.png" alt="Buy Me A Coffee" style="height: 40px !important;width: 217px !important;" ></a>
 
 ###### Python script to download videos from your LinuxAcademy account for offline viewing
 ![Python 3.6](https://img.shields.io/badge/python-3.6-blue.svg)
