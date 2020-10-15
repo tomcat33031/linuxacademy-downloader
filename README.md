@@ -1,4 +1,4 @@
-# Download videos from Linux Academy / LinuxAcademy-DL
+# Download videos from Linux Academy
 
 If you feel like it, you can buy me a coffee ;)
 
