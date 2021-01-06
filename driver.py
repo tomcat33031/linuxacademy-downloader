@@ -127,9 +127,9 @@ if not os.path.exists(os.getcwd() + os.path.sep + 'cookies.txt'):
     exit(1)
 
 try:
-    for index, url in enumerate(urls, start=63):
+    for index, url in enumerate(urls, start=0):
         temp_list = [urls[index]]
-        serial = str(index + 1).zfill(2)
+        serial = str(index + 1).zfill(3)
         print(f'Downloading: {lessons[index]} ... ', end='', flush=True)
         ydl_opts = {
             'cookiefile': 'cookies.txt',
