@@ -15,9 +15,10 @@ If you feel like it, you can buy me a coffee ;)
 - html5lib - https://pypi.org/project/html5lib/
 - Selenium - https://pypi.org/project/selenium/
 - ChromeDriver - http://chromedriver.chromium.org/
+- GoogleChrome (Optional for Linux) - https://linuxize.com/post/how-to-install-google-chrome-web-browser-on-centos-7/
 - youtube_dl - https://pypi.org/project/youtube_dl/
 - Get cookies.txt - https://bit.ly/GoogleChrome-GetCookiesTxt
-- FFMpeg - https://www.ffmpeg.org/download.html
+- FFMpeg - https://www.ffmpeg.org/download.html OR https://linuxize.com/post/how-to-install-ffmpeg-on-centos-7/
 
 ### Usage
 
@@ -35,6 +36,16 @@ If you feel like it, you can buy me a coffee ;)
 
 > course_link e.g. https://linuxacademy.com/cp/modules/view/id/287
 
+> download_guides.sh run for download document of course from temp file guides.txt . 
+
+```javascript
+$.each($('a'), function(index, video){
+  if(video.href.includes("guides/download")){
+    console.log(video.href);
+  }
+});
+```
+
 ``` python
 >>> python driver.py username password course_link
 ```
@@ -45,3 +56,7 @@ If you feel like it, you can buy me a coffee ;)
 
 ### To-Do
 Automate the process for obtaining cookies
+Automate copy to the S3
+
+python driver.py ntvanh4@cmc.com.vn Vietanh123 https://linuxacademy.com/cp/modules/view/id/<id
+aws s3 sync <destination> <target>

@@ -74,7 +74,7 @@ browser.set_page_load_timeout(10000)
 browser.set_window_size(1366, 768)
 
 browser.get('https://linuxacademy.com/cp/ssologin')
-time.sleep(15)
+time.sleep(10)
 
 print('* Trying to log in ... *')
 user = browser.find_element_by_name('username')
@@ -82,7 +82,7 @@ user.send_keys(username)
 password = browser.find_element_by_name('password')
 password.send_keys(pwd)
 password.send_keys(Keys.RETURN)
-time.sleep(30)
+time.sleep(15)
 
 try:
     logged_in_name = browser.find_element_by_id('navigationUsername')
@@ -93,7 +93,7 @@ except Exception as e:
 
 print('Getting lesson links...')
 browser.get(url)
-time.sleep(10)
+time.sleep(5)
 html = browser.page_source
 parsed_html = BeautifulSoup(html, 'html5lib')
 
@@ -127,14 +127,14 @@ if not os.path.exists(os.getcwd() + os.path.sep + 'cookies.txt'):
     exit(1)
 
 try:
-    for index, url in enumerate(urls, start=0):
+    for index, url in enumerate(urls, start=63):
         temp_list = [urls[index]]
-        serial = str(index + 1)
+        serial = str(index + 1).zfill(2)
         print(f'Downloading: {lessons[index]} ... ', end='', flush=True)
         ydl_opts = {
             'cookiefile': 'cookies.txt',
             'force_generic_extractor': True,
-            'outtmpl': os.getcwd() + os.path.sep + title + os.path.sep + serial + '. ' + re.sub('[?/:]', '',
+            'outtmpl': os.getcwd() + '/downloaded' + os.path.sep + title + os.path.sep + serial + '. ' + re.sub('[?/:]', '',
                                                                                                 lessons[
                                                                                                     index]) + '.%(ext)s',
             'sleep_interval': 10,
