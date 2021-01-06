@@ -57,6 +57,3 @@ $.each($('a'), function(index, video){
 ### To-Do
 Automate the process for obtaining cookies
 Automate copy to the S3
-
-python driver.py ntvanh4@cmc.com.vn Vietanh123 https://linuxacademy.com/cp/modules/view/id/<id
-aws s3 sync <destination> <target>
