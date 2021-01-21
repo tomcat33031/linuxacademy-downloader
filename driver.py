@@ -114,8 +114,8 @@ for index, anchor in enumerate(anchors):
     else:
         pass
 
-if not os.path.exists(title):
-    os.makedirs(re.sub('[?/:]', '', title))
+# if not os.path.exists(title):
+#     os.makedirs(re.sub('[?/:]', '', title))
 
 browser.close()
 browser.quit()
@@ -127,6 +127,8 @@ if not os.path.exists(os.getcwd() + os.path.sep + 'cookies.txt'):
     exit(1)
 
 try:
+    os.makedirs(os.getcwd() + '/downloaded' + os.path.sep + title + os.path.sep + "00. Downloads")
+    os.mknod(os.getcwd() + '/downloaded' + os.path.sep + title + os.path.sep + "000. Details.txt")
     for index, url in enumerate(urls, start=0):
         temp_list = [urls[index]]
         serial = str(index + 1).zfill(3)
